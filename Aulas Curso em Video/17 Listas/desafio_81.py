@@ -19,7 +19,9 @@ while True:
         break
 print(f"Lista de números: {l}")
 print(f"A: Foram {a} números.")
-if 5 in l:
-    print(f"C: lista possui o número 5 na posição {l.index(5)}")
 l.sort(reverse=True)
 print(f"B: {l}")
+if 5 in l:
+    print("C: 5 foi encontrado na lista.")
+else:
+    print("C: 5 não foi encontrado na lista.")

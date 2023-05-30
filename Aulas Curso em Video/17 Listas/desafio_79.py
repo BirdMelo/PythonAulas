@@ -20,4 +20,4 @@ while True:
             print("Digitação incorreta. Por favor, confirme corretamente.")
     if more in "n":
         break
-print(sorted(l))
+print(f"Lista de {cont-1} em ordem crescente: {sorted(l)}")

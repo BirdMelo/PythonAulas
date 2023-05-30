@@ -13,21 +13,13 @@ for i in range(0, 5):
     if smaller > n:
         smaller = n
     numL.append(n)
-if numL.count(bigger) == 1:
-    print(f"Maior: {bigger}; Posição: {numL.index(bigger)+1}")
-    print(20 * "-")
-else:
-    print(f"Maior: {bigger}; Posição:", end=" ")
-    for num in range(0, len(numL)):
-        if numL[num] == bigger:
-            print(f"{num+1}", end=" ")
-    print("\n" + 20 * "-")
-if numL.count(smaller) == 1:
-    print(f"Menor: {smaller}")
-    print(20 * "-")
-else:
-    print(f"Menor: {smaller}; Posição:", end=" ")
-    for num in range(0, len(numL)):
-        if numL[num] == smaller:
-            print(f"{num+1}", end=" ")
-    print("\n" + 20 * "-")
+print(f"Maior:{bigger} Posição:", end=" ")
+for i, v in enumerate(numL):
+    if v == bigger:
+        print(f"{i}", end=" ")
+print()
+print(f"Menor: {smaller} Posição:", end=" ")
+for i, v in enumerate(numL):
+    if v == smaller:
+        print(f"{i}", end=" ")
+print()
