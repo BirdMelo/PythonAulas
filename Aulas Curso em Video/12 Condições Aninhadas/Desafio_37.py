@@ -5,17 +5,18 @@
 # 2 para octal;
 # 3 para hexadecimal.
 
-print('Essa é uma conversora de números decimas para:'
-      + ' Binario, Octal e Hexadecimal.')
+print(
+    "Essa é uma conversora de números decimas para:" + " Binario, Octal e Hexadecimal."
+)
 
-num = int(input('Digite um número de decimal: '))
+num = int(input("Digite um número de decimal: "))
 
-escolha = int(input('Escolha: 1-Bínario; 2-Octal; 3-Hexadecimal. '))
+escolha = int(input("Escolha: 1-Bínario; 2-Octal; 3-Hexadecimal. "))
 if escolha == 1:
     sb = []
 
     r = num % 2
-    num = num//2
+    num = num // 2
     sb.append(str(r))
     while num >= 2:
         r = num % 2
@@ -23,9 +24,9 @@ if escolha == 1:
         sb.append(str(r))
 
     sb.append(str(num))
-    print('-'*25)
-    print('Valor em Binario é: {}'.format(''.join(list(reversed(sb)))))
-    print('-'*25)
+    print("-" * 25)
+    print("Valor em Binario é: {}".format("".join(list(reversed(sb)))))
+    print("-" * 25)
 
 elif escolha == 2:
     sh = []
@@ -38,49 +39,49 @@ elif escolha == 2:
         num = num // 8
         sh.append(str(r))
     sh.append(str(num))
-    print('-'*25)
-    print('Valor em Octal é: {}'.format(''.join(list(reversed(sh)))))
-    print('-'*25)
+    print("-" * 25)
+    print("Valor em Octal é: {}".format("".join(list(reversed(sh)))))
+    print("-" * 25)
 
 elif escolha == 3:
     sh = []
 
     r = num % 16
-    num = num//16
+    num = num // 16
     if r == 10:
-        sh.append('A')
+        sh.append("A")
     elif r == 11:
-        sh.append('B')
+        sh.append("B")
     elif r == 12:
-        sh.append('C')
+        sh.append("C")
     elif r == 13:
-        sh.append('D')
+        sh.append("D")
     elif r == 14:
-        sh.append('E')
+        sh.append("E")
     elif r == 15:
-        sh.append('F')
+        sh.append("F")
     else:
         sh.append(str(r))
 
-    while int(num/16):
+    while int(num / 16):
         r = num % 16
         num = num // 16
         if r == 10:
-            sh.append('A')
+            sh.append("A")
         elif r == 11:
-            sh.append('B')
+            sh.append("B")
         elif r == 12:
-            sh.append('C')
+            sh.append("C")
         elif r == 13:
-            sh.append('D')
+            sh.append("D")
         elif r == 14:
-            sh.append('E')
+            sh.append("E")
         elif r == 15:
-            sh.append('F')
+            sh.append("F")
         else:
             sh.append(str(r))
 
     sh.append(str(num))
-    print('-'*25)
-    print('Valor em Hexadecimal é: {}'.format(''.join(list(reversed(sh)))))
-    print('-'*25)
+    print("-" * 25)
+    print("Valor em Hexadecimal é: {}".format("".join(list(reversed(sh)))))
+    print("-" * 25)
