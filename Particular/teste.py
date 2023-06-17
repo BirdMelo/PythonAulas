@@ -1,8 +1,5 @@
-from random import randint
-
-l: list = []
-for i in range(4):
-    j = {"jogos": randint(0, 6)}
-    l.append(j.copy())
-    j.clear()
-print(l[1]["jogos"])
+num = int(input("num: "))
+for i in range(num, 0, -1):
+    num *= i
+    print(i)
+print(num)
